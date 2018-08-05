@@ -1,0 +1,114 @@
+{
+  "objects": {
+    "default": "node",
+    "predefine": {
+      "key": [
+        "key0",
+        "key1",
+        "key2",
+        "key3",
+        "key4",
+        "key5",
+        "key6",
+        "key7",
+        "key8"
+      ],
+      "triangle": [
+        "triangle"
+      ],
+      "diamond": [
+        "diamond"
+      ],
+      "square": [
+        "square"
+      ],
+      "circle": [
+        "circle"
+      ]
+    },
+    "customobj": [
+      "robot"
+    ]
+  },
+  "shape": {
+    "node": {
+      "prefab": "circle",
+      "showName": true,
+      "x": false,
+      "y": false,
+      "color": false,
+      "width": 80,
+      "height": 80
+    },
+    "robot": {
+      "prefab": "circle",
+      "showName": true,
+      "x": false,
+      "y": false,
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 0,
+        "a": 1
+      },
+      "width": 40,
+      "height": 40
+    },
+    "triangle": {
+      "prefab": "triangle",
+      "showName": false
+    },
+    "diamond": {
+      "prefab": "diamond",
+      "showName": false
+    },
+    "square": {
+      "prefab": "square",
+      "showName": false
+    },
+    "circle": {
+      "prefab": "circle",
+      "showName": false
+    },
+    "key": {
+      "prefab": "key",
+      "showName": false
+    }
+  },
+  "predicates_rules": {
+    "locked": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "color",
+        "value": {
+          "equal": "{'r': 255,'g': 0,'b': 0, 'a': 1}"
+        }
+      }
+    },
+    "open": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "color",
+        "value": {
+          "equal": "{'r': 0,'g': 255,'b': 0, 'a': 1}"
+        }
+      }
+    },
+    "arm-empty ": {
+      "left":"robot",
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "color",
+        "value": {
+          "equal": "{'r': 0,'g': 255,'b': 0, 'a': 1}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "objects": {
+    "default": "node",
+    "predefine": {
+      "key": [
+        "key0",
+        "key1",
+        "key2",
+        "key3",
+        "key4",
+        "key5",
+        "key6",
+        "key7",
+        "key8"
+      ],
+      "triangle": [
+        "triangle"
+      ],
+      "diamond": [
+        "diamond"
+      ],
+      "square": [
+        "square"
+      ],
+      "circle": [
+        "circle"
+      ]
+    },
+    "customobj": [
+      "robot"
+    ]
+  },
+  "shape": {
+    "node": {
+      "prefab": "circle",
+      "showName": true,
+      "x": false,
+      "y": false,
+      "color": {
+        "r": 0,
+        "g": 255,
+        "b": 0,
+        "a": 1
+      },
+      "width": 80,
+      "height": 80
+    },
+    "robot": {
+      "prefab": "circle",
+      "showName": true,
+      "x": false,
+      "y": false,
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 0,
+        "a": 1
+      },
+      "width": 40,
+      "height": 40
+    },
+    "triangle": {
+      "prefab": "triangle",
+      "showName": false
+    },
+    "diamond": {
+      "prefab": "diamond",
+      "showName": false
+    },
+    "square": {
+      "prefab": "square",
+      "showName": false
+    },
+    "circle": {
+      "prefab": "circle",
+      "showName": false
+    },
+    "key": {
+      "prefab": "key",
+      "showName": false
+    }
+  },
+  "predicates_rules": {
+    "conn": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "none",
+        "1": "none",
+        "value": {
+          "function": "draw_line"
+        }
+      }
+    },
+    "key-shape": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "sprite",
+        "1": "shape",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "lock-shape": {
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "sprite",
+        "1": "shape",
+        "value": {
+          "equal": "1"
+        }
+      },
+      "rule2": {
+        "0": "scale",
+        "value": {
+          "equal": "2"
+        }
+      }
+    },
+    "at": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "none",
+        "1": "none",
+        "value": {
+          "function": "distribute_grid"
+        }
+      }
+    },
+    "at-robot": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "none",
+        "1": "none",
+        "value": {
+          "function": "distribute_grid"
+        }
+      }
+    },
+    "place": {
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "none",
+        "value": {
+          "function": "distribute_grid_around_point"
+        }
+      },
+      "rule2": {
+        "0": "depth",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "key": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "depth",
+        "value": {
+          "equal": "0"
+        }
+      }
+    },
+    "locked": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "color",
+        "value": {
+          "equal": "{'r': 255,'g': 0,'b': 0, 'a': 1}"
+        }
+      }
+    },
+    "holding": {
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "x",
+        "Robot": "x",
+        "value": {
+          "equal": "Robot"
+        }
+      },
+      "rule2": {
+        "0": "y",
+        "Robot": "y",
+        "value": {
+          "equal": "Robot"
+        }
+      }
+    },
+    "open": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "colour",
+        "value": {
+          "equal": "GREEN"
+        }
+      }
+    }
+  }
+}
