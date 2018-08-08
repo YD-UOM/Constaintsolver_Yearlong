@@ -99,7 +99,7 @@
       }
     },
     "arm-empty ": {
-      "left":"robot",
+      "left": "robot",
       "rules": [
         "rule1"
       ],
@@ -107,6 +107,110 @@
         "0": "color",
         "value": {
           "equal": "{'r': 0,'g': 255,'b': 0, 'a': 1}"
+        }
+      }
+    },
+    "key-shape ": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "prefab",
+        "1": "prefab",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "lock-shape": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "0": "prefab",
+        "1": "prefab",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "at": {
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "x",
+        "1": "x",
+        "value": {
+          "equal": "1"
+        }
+      },
+      "rule2": {
+        "0": "y",
+        "1": "y",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "at-robot": {
+      "left": "robot",
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "x",
+        "1": "x",
+        "value": {
+          "equal": "1"
+        }
+      },
+      "rule2": {
+        "0": "y",
+        "1": "y",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "holding": {
+      "right": "robot",
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "x",
+        "1": "x",
+        "value": {
+          "equal": "1"
+        }
+      },
+      "rule2": {
+        "0": "y",
+        "1": "y",
+        "value": {
+          "equal": "1"
+        }
+      }
+    },
+    "place": {
+      "rules": [
+        "rule1",
+        "rule2"
+      ],
+      "rule1": {
+        "0": "x",
+        "value": {
+          "function": "distribute_grid_around_pointx"
+        }
+      },
+      "rule2": {
+        "0": "y",
+        "value": {
+          "function": "distribute_grid_around_pointy"
         }
       }
     }

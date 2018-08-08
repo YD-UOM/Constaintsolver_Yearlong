@@ -1,6 +1,9 @@
+import re
 """This module contain all the customer funtion we designed to help position the objects"""
 
-__all__ = ['init_space', 'distributex']
+
+__all__ = ['init_space', 'distributex','distribute_grid_around_pointx']
+
 
 def init_space(size):
     """The funtion initialise an space for distributex function
@@ -32,3 +35,11 @@ def distributex(obj, space, spacebtw, width, remove):
             space[objindex] = objindex
             return True
     return False
+
+def distribute_grid_around_pointx(obj,rowindex,margin):
+    row=int(re.findall('\d+',obj)[rowindex])
+    return row*margin
+
+def distribute_grid_around_pointy(obj,colindex,margin):
+    col=int(re.findall('\d+',obj)[colindex])
+    return col*margin
