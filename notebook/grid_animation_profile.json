@@ -213,6 +213,20 @@
           "function": "distribute_grid_around_pointy"
         }
       }
+    },
+     "conn": {
+      "rules": [
+        "rule1"
+      ],
+      "rule1": {
+        "require":{
+          "0":["x","y"],
+          "1":["x","y"]
+        },
+        "action": {
+          "function": "draw_line"
+        }
+      }
     }
   }
 }
