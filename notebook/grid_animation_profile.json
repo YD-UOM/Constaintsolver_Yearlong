@@ -32,7 +32,7 @@
   },
   "shape": {
     "node": {
-      "prefab": "circle",
+      "prefabImage": "circle",
       "showName": true,
       "x": false,
       "y": false,
@@ -41,7 +41,7 @@
       "height": 80
     },
     "robot": {
-      "prefab": "circle",
+      "prefabImage": "circle",
       "showName": true,
       "x": false,
       "y": false,
@@ -55,24 +55,28 @@
       "height": 40
     },
     "triangle": {
-      "prefab": "triangle",
+      "prefabImage": "triangle",
       "showName": false
     },
     "diamond": {
-      "prefab": "diamond",
+      "prefabImage": "diamond",
       "showName": false
     },
     "square": {
-      "prefab": "square",
+      "prefabImage": "square",
       "showName": false
     },
     "circle": {
-      "prefab": "circle",
+      "prefabImage": "circle",
       "showName": false
     },
     "key": {
-      "prefab": "key",
-      "showName": false
+      "prefabImage": "key",
+      "showName": false,
+      "x":false,
+      "y":false,
+      "width": 20,
+      "height":20
     }
   },
   "predicates_rules": {
@@ -115,8 +119,8 @@
         "rule1"
       ],
       "rule1": {
-        "0": "prefab",
-        "1": "prefab",
+        "0": "prefabImage",
+        "1": "prefabImage",
         "value": {
           "equal": "1"
         }
@@ -127,8 +131,8 @@
         "rule1"
       ],
       "rule1": {
-        "0": "prefab",
-        "1": "prefab",
+        "0": "prefabImage",
+        "1": "prefabImage",
         "value": {
           "equal": "1"
         }
