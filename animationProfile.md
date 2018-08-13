@@ -36,7 +36,7 @@ The syntax of objects file:
   "objects": {
     "default": "shapename",
     "predefine": {
-      "shapename": [obj0,obj1,obj2...objn],
+      "shapename": [obj0,obj1,obj2...objn]
     },
     "custom": {
       "shapename": [customobj0,customobj1...customobjn],
@@ -52,7 +52,7 @@ Example:
   "objects": {
     "default": "node",
     "predefine": {
-      "key": [
+      "key": [                 
         "key0",
         "key1",
         "key2",
@@ -65,18 +65,9 @@ Example:
       ],
       "triangle": [
         "triangle"
-      ],
-      "diamond": [
-        "diamond"
-      ],
-      "square": [
-        "square"
-      ],
-      "circle": [
-        "circle"
       ]
     },
-    "customobj": [
+    "custom": [
       "circle":["robot"]
     ]
   }
