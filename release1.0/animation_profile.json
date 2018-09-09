@@ -1,10 +1,15 @@
 {
   "objects": {
     "default": "Block",
-    "customobj": [
-      "Claw",
-      "Board"
-    ]
+    "predefine": {},
+    "custom": {
+      "Claw": [
+        "Claw"
+      ],
+      "Board": [
+        "Board"
+      ]
+    }
   },
   "shape": {
     "Block": {

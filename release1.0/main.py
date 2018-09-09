@@ -9,27 +9,32 @@ import visualisation_generator  # Step4. use the animation profile and stages fr
 import json
 
 def get_visualisation_file():
-	"""This function will call the other modules to generate the visualisaiton file.
-	"""
-	if len(sys.argv) < 4:
-	    print("some file is missing, please follow the command below to run the program")
-	    print("python main.py [dommainfile] [problemfile] [animationprofile]")
-	    sys.exit()
+    """This function will call the other modules to generate the visualisaiton file.
+    """
+    if len(sys.argv) < 4:
+        print("some file is missing, please follow the command below to run the program")
+        print("python main.py [dommainfile] [problemfile] [animationprofile]")
+        sys.exit()
 
-	domain_file = sys.argv[1]
-	problem_file = sys.argv[2]
-	animation_file = sys.argv[3]
+    domain_file = sys.argv[1]
+    problem_file = sys.argv[2]
+    animation_file = sys.argv[3]
 
-	# read animation profile from json
-	file = open(animation_file)
-	content = file.read()
-	animation_profile = json.loads(content)
+    # read animation profile from json
+    file = open(animation_file)
+    content = file.read()
+    animation_profile = json.loads(content)
 
 
-	plan = plan_generator.get_plan(domain_file, problem_file)
-	problem_json = problem_parser.get_problem_json(problem_file)
-	stages = predicates_generator.get_stages(plan, problem_json, problem_file)
-	# A file called visualistaion.json will be generated in the folder if successful
-	visualisation_generator.get_visualisation_json(stages,animation_profile)
+    plan = plan_generator.get_plan(domain_file, problem_file)
+    problem_json = problem_parser.get_problem_json(problem_file)
+    stages = predicates_generator.get_stages(plan, problem_json, problem_file)
+    
+    with open('blockstage.json', 'w') as outfile:
+        json.dump(stages, outfile)
+    
+
+    # A file called visualistaion.json will be generated in the folder if successful
+    # visualisation_generator.get_visualisation_json(stages,animation_profile)
 if __name__ == "__main__":
     get_visualisation_file()
